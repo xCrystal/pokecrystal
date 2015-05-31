@@ -96517,6 +96517,257 @@ SECTION "bank79", ROMX, BANK[$79]
 
 SECTION "bank7A", ROMX, BANK[$7A]
 
+; ~274 bytes
+
+; Save position (2-byte tile address) at de into next snake position at $c700-$c7ff
+SavePosition:
+	ld hl, $c6fe
+	xor a
+.loop
+	inc hl
+	inc hl
+	cp (hl)
+	jr nz, .loop
+	ld (hl), d
+	inc hl
+	ld (hl), e
+	ret
+
+; Place 20 black tiles starting from hl
+DrawHorizontalBorder:
+	ld bc, $0014 ; screen width (20)
+	xor a ; black tile (border)
+	jp $314c ; ByteFill
+
+; Draw BG
+InitScreen:	
+	ld hl, $c700 ; $c700 will store the position of the snake in the screen
+	ld bc, 100 ; for snake of 50 tiles long max
+	xor a 
+	call $314c ; ByteFill
+	
+	ld hl, $c3a0 ; tilemap
+
+; Draw top border
+	call DrawHorizontalBorder ; top row
+
+; Draw background
+	ld bc, $0140 ; screen size (20x18) - 2 * screen width (2x20)
+	ld a, $7f ; white tile (BG)
+	call $314c ; ByteFill
+
+; Draw bottom border
+	call DrawHorizontalBorder ; bottom row
+
+; Draw vertical borders
+	ld hl, $c3b3 ; top right tile
+	ld bc, $0013 ; screen width - 1
+	xor a ; black tile (border)
+	ld d, $12 ; screen height
+.loop
+	ld [hli], a ; right border tile
+	ld [hl], a ; left border tile
+	add hl, bc
+	dec d
+	jr nz, .loop
+	
+; Draw obstacles (two horizontal bars)
+	ld hl, $c409
+	ld bc, $000A
+	xor a
+	push bc	
+	call ByteFill
+	ld hl, $c481
+	pop bc
+	call ByteFill
+
+; Entry point
+InitGame:
+	call InitScreen
+	
+; Draw snake
+	ld de, $c448 ; center of screen
+	
+; Place the three-tile snake in the screen and save its position and length	
+	ld b, 3
+	ld a, b
+	ldh [$ffe6], a ; save snake length	
+	xor a ; black tile (snake)
+.loop2
+	ld [de], a ; place snake tile	
+	call SavePosition ; save the snake position in the buffer at $c700
+	dec b
+	inc de
+	jr nz, .loop2
+; fallthrough
+
+; Draw the object that can be eaten in a random position in the screen
+DrawObject:
+; Each random number covers 2 tiles, $ffcf is used to rotate between left and right tile
+	ldh a, [$ffcf]
+	xor 1
+	ldh [$ffcf], a
+
+.drawObject
+	call $30A2 ; random
+	cp $b4 ; screen size / 2
+	jr nc, .drawObject ; don't place the object outside the screen
+
+	ld b, $0
+	ld c, a
+	ld hl, $c3a0
+	add hl,bc
+	add hl,bc
+	ldh a, [$ffcf]
+	and a
+	jr z, .ok
+	inc hl
+.ok
+	xor a ; black tile
+	cp [hl]
+	jr z, .drawObject ; don't place the object in a border or over a snake or obstacle tile
+
+; Place object
+	ld a, $f1 ; object [x]
+	ld [hl], a ; place object
+; fallthrough
+
+; Move snake it the $c700 buffer
+ShiftPositions: ; Main Loop
+; $c700 contains snake tail
+; snake head is at $c700 + 2 * snake_length - 2
+	ld de, $c700
+	ldh a, [$ffe6]
+	ld b, a
+	dec b
+	add b
+	
+; If we ate the object in the last move, the snake only increases its length
+	ld a, [$dfff]
+	and a
+	jr nz, .ateObject
+	
+.loop
+; move every snake tile one space
+	inc de
+	inc de
+	ld a, [de]
+	dec de
+	dec de
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .loop
+	jr .goOn
+
+.ateObject
+	xor a
+	ld [$dfff], a
+	ldh a, [$ffe6]
+	inc a
+	ldh [$ffe6], a ; increase snake length
+	dec a
+	dec a
+.loop2
+	inc de
+	inc de
+	dec a
+	jr nz, .loop2
+; fallthrough	
+
+.goOn
+; de now points to previous snake head, load its content (tile occupied) into hl
+	ld a, [de]
+	ld [hl], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	inc de ; de now points to new snake head
+; fallthrough	
+	
+; Read user input from $ffa6 
+ReadUserInput:
+	ldh a, [$ffa6] ; joypad register
+	and $F0 ; %11110000, R/L/U/D bits
+	jr nz, .newMovement ; key was pressed
+	ldh a, [$ffd0] ; take the last key pressed, which is also current movement direction
+.newMovement
+	ldh [$ffd0], a ; save last key pressed out of R/L/U/D
+	cp $10
+	jr z, MovePositionRight
+	cp $20
+	jr z, MovePositionLeft
+	cp $40
+	jr z, MovePositionUp
+;	jr MovePositionDown
+
+MovePositionDown: ; +$14
+	ld bc, $0014
+	jr MovePosition
+MovePositionUp: ; - $14
+	ld bc, $ffec
+	jr MovePosition
+MovePositionLeft: ; -1
+	ld bc, $ffff
+	jr MovePosition
+MovePositionRight: ; +1
+	ld bc, $0001
+;	jr MovePosition
+
+; Calculate the new snake head and save it in the buffer
+MovePosition:
+	add hl, bc
+
+; Check if the snake collided so the player lost
+	xor a
+	cp [hl]
+	jp z, InitGame
+
+; Check if the snake ate the object
+	ld a, $f1
+	cp [hl]
+	push af ; push f flag for later
+	jr nz, .didNotEat
+	ld [$dfff], a
+
+.didNotEat
+; Save the new snake head tile in the buffer
+	ld a, h
+	ld [de], a
+	inc de
+	ld a, l
+	ld [de], a
+; fallthrough
+
+; Redraw snake from the data at buffer $c700
+RedrawSnake:
+	call InitScreen
+	xor a
+	ld hl, $c700
+.loop	
+	cp [hl]
+	jr z, .delayFrames ; if [hl] == $00 then the snake is over
+	ld d, [hl]
+	inc hl
+	ld e, [hl]
+	inc hl
+	ld [de], a ; draw black tile
+	jr .loop
+
+; Delay 49 - snake_length frames
+.delayFrames
+	ld c, 49
+	ldh a, [$ffe6]
+	sub a
+	sub a
+	add c
+	call $033c ; DelayFrames
+	
+; Finished this loop
+	pop af ; restore whether snake ate or not
+	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
+	jp ShiftPositions ; skip placing an object and go back to the main loop
+
 
 SECTION "bank7B", ROMX, BANK[$7B]
 
