@@ -96674,6 +96674,7 @@ ShiftPositions: ; Main Loop
 	inc a
 	ldh [$ffe6], a ; increase snake length
 	dec a
+	dec a
 .loop2
 	inc de
 	inc de
@@ -96689,7 +96690,7 @@ ShiftPositions: ; Main Loop
 	inc de
 	ld a, [de]
 	ld l, a
-	dec de 
+	inc de 
 ; fallthrough	
 	
 ; Read user input from $ffa6 
@@ -96763,6 +96764,7 @@ RedrawSnake:
 	jr .loop
 
 ; Delay 49 - snake_length frames
+; €€€ this is broken
 .delayFrames
 	ld c, 49
 	ldh a, [$ffe6]
