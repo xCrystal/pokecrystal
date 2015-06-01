@@ -96519,6 +96519,7 @@ SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
 ; 0:3055 -> ld a,7a; ld (2000),a ; jp 4008 ; freeze ff9f at 7a
+; 0x74 eat ; 0x24 snake ; 0x60 black ; 0x7f white
 
 
 ; Place 20 black tiles starting from hl
@@ -96731,7 +96732,6 @@ MovePosition:
 ; Check if the snake ate the object
 	ld a, $74
 	cp [hl]
-	push af ; push f flag for later
 	jr nz, .checkCollision
 	ldh [$fffe], a
 	jr .didEat
@@ -96764,9 +96764,11 @@ MovePosition:
 	call $033c ; DelayFrames
 	
 ; Finished this loop
-	pop af ; restore whether snake ate or not
-	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
+	ldh a, [$fffe] ; restore whether snake ate or not
+	and a
+	jp nz, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
+
 
 
 SECTION "bank7B", ROMX, BANK[$7B]
