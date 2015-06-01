@@ -96526,11 +96526,11 @@ SavePosition:
 .loop
 	inc hl
 	inc hl
-	cp (hl)
+	cp [hl]
 	jr nz, .loop
-	ld (hl), d
+	ld [hl], d
 	inc hl
-	ld (hl), e
+	ld [hl], e
 	ret
 
 ; Place 20 black tiles starting from hl
@@ -96563,7 +96563,7 @@ InitScreen:
 	ld hl, $c3b3 ; top right tile
 	ld bc, $0013 ; screen width - 1
 	xor a ; black tile (border)
-	ld d, $12 ; screen height
+	ld d, $11 ; screen height 
 .loop
 	ld [hli], a ; right border tile
 	ld [hl], a ; left border tile
@@ -96576,10 +96576,11 @@ InitScreen:
 	ld bc, $000A
 	xor a
 	push bc	
-	call ByteFill
+	call $314c ; ByteFill
 	ld hl, $c481
 	pop bc
-	call ByteFill
+	call $314c ; ByteFill
+	ret
 
 ; Entry point
 InitGame:
@@ -96767,6 +96768,7 @@ RedrawSnake:
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
+	
 
 
 SECTION "bank7B", ROMX, BANK[$7B]
