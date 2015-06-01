@@ -96678,13 +96678,14 @@ ShiftPositions: ; Main Loop
 	jr nz, .loop2
 ; fallthrough	
 
+; €€€ alright until here, but.ateObject not tested -- 40B7
 .goOn
-; de now points to previous snake head, load its content (tile occupied) into hl
+; de now points to previous snake head, load its content (tile occupied) to hl
 	ld a, [de]
-	ld [hl], a
+	ld h, a
 	inc de
 	ld a, [de]
-	ld [hl], a
+	ld l, a
 	inc de ; de now points to new snake head
 ; fallthrough	
 	
