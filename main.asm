@@ -96518,28 +96518,22 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
-; 0:2447 -> ld a,7a; ld (2000),a ; jp 4047
+; 0:2447 -> ld a,7a; ld (2000),a ; jp 4007
 ; €€€ the object in loss on each loop during the call to initscreen
 
-; Save position (2-byte tile address) at de into next snake position at $c700-$c7ff
-SavePosition:
-	ld hl, $c6fe
-	xor a
-.loop
-	inc hl
-	inc hl
-	cp [hl]
-	jr nz, .loop
-	ld [hl], d
-	inc hl
-	ld [hl], e
-	ret
 
 ; Place 20 black tiles starting from hl
 DrawHorizontalBorder:
 	ld bc, $0014 ; screen width (20)
 	xor a ; black tile (border)
 	jp $314c ; ByteFill
+
+; Entry point
+InitGame:
+	ld hl, $c700 ; $c700 will store the position of the snake in the screen
+	ld bc, 100 ; for snake of 50 tiles long max
+	xor a 
+	call $314c ; ByteFill
 
 ; Draw BG
 InitScreen:	
@@ -96578,15 +96572,7 @@ InitScreen:
 	pop bc
 	call $314c ; ByteFill
 	ret
-
-; Entry point
-InitGame:
-	ld hl, $c700 ; $c700 will store the position of the snake in the screen
-	ld bc, 100 ; for snake of 50 tiles long max
-	xor a 
-	call $314c ; ByteFill
-
-	call InitScreen
+	
 	ldh a, [$ffd0]
 	ld a, $10
 	ldh [$ffd0], a ; starting movement direction, set to right
@@ -96599,8 +96585,15 @@ InitGame:
 	ldh [$ffe6], a ; save snake length	
 	xor a ; black tile (snake)
 .loop2
-	ld [de], a ; place snake tile	
-	call SavePosition ; save the snake position in the buffer at $c700
+	ld [de], a ; place snake tile
+; save the snake position in the buffer at $c700	
+	ld hl, $c6fe
+	xor a
+	inc hl
+	inc hl
+	ld [hl], d
+	inc hl
+	ld [hl], e
 	dec b
 	inc de
 	jr nz, .loop2
@@ -96651,6 +96644,17 @@ ShiftPositions: ; Main Loop
 	ld a, [$dfff]
 	and a
 	jr nz, .ateObject
+	
+; Remove the snake's tail
+; €€€ lines 131-137 separate func with lines 173-179
+	ld a, [de]
+	ld h, a
+	inc de
+	ld a, [de]
+	ld l, a
+	dec de
+	ld a, $7f
+	ld [hl], a
 	
 .loop
 ; move every snake tile one space
@@ -96739,7 +96743,9 @@ MovePosition:
 	ld [$dfff], a
 
 .didNotEat
-; Save the new snake head tile in the buffer
+; Save the new snake head tile in the buffer and draw the new head
+	xor a
+	ld [hl], a ; draw head
 	ld a, h
 	ld [de], a
 	inc de
@@ -96748,35 +96754,21 @@ MovePosition:
 ; fallthrough
 ; €€€ check that the three tiles $c700 are moved correctly 
 
-; Redraw snake from the data at buffer $c700
-RedrawSnake:
-	call InitScreen
-	xor a
-	ld hl, $c700
-.loop	
-	cp [hl]
-	jr z, .delayFrames ; if [hl] == $00 then the snake is over
-	ld d, [hl]
-	inc hl
-	ld e, [hl]
-	inc hl
-	ld [de], a ; draw black tile
-	jr .loop
-
 ; Delay 49 - snake_length frames
 ; €€€ this is broken
 .delayFrames
-	ld c, 49
 	ldh a, [$ffe6]
-	sub a
-	sub a
-	add c
+	ld c, a
+	ld a, 49
+	sub c
+	ld c, a
 	call $033c ; DelayFrames
 	
 ; Finished this loop
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
+	
 	
 	
 
