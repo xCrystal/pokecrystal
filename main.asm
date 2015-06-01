@@ -96518,7 +96518,8 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
-; 0:2447 -> ld a,7a; ld (2000),a ; jp 4051
+; 0:2447 -> ld a,7a; ld (2000),a ; jp 4047
+; €€€ the object in loss on each loop during the call to initscreen
 
 ; Save position (2-byte tile address) at de into next snake position at $c700-$c7ff
 SavePosition:
@@ -96662,6 +96663,8 @@ ShiftPositions: ; Main Loop
 	inc de
 	dec b
 	jr nz, .loop
+	dec de
+	dec de ; de now points to previous snake head
 	jr .goOn
 
 .ateObject
@@ -96680,13 +96683,13 @@ ShiftPositions: ; Main Loop
 
 ; €€€ alright until here, but.ateObject not tested -- 40B7
 .goOn
-; de now points to previous snake head, load its content (tile occupied) to hl
+; de now points to snake head tile, load its content (tile occupied) to hl
 	ld a, [de]
 	ld h, a
 	inc de
 	ld a, [de]
 	ld l, a
-	inc de ; de now points to new snake head
+	dec de 
 ; fallthrough	
 	
 ; Read user input from $ffa6 
