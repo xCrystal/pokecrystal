@@ -96518,26 +96518,24 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
-; 0:3055 -> ld a,7a; ld (2000),a ; jp 4007 ; freeze ff9f at 7a
-; 0x74 eat ; 0x24 snake ; 0x23 black ; 0x00 white
+; 0:3055 -> ld a,7a; ld (2000),a ; jp 4008 ; freeze ff9f at 7a
 
 
 ; Place 20 black tiles starting from hl
 DrawHorizontalBorder:
 	ld bc, $0014 ; screen width (20)
-	ld a, $23 ; black tile (border)
+	ld a, $60 ; black tile (border)
 	jp $314c ; ByteFill
 
 ; Entry point
 InitGame:
 	ld a, 1
 	ldh [$ffd6], a ; hBGMapMode
-	call $3564 ; ClearPalettes
 
 Restart:
 	ld hl, $c700 ; $c700 will store the position of the snake in the screen
 	ld bc, 100 ; for snake of 50 tiles long max
-	xor a 
+	xor a
 	call $314c ; ByteFill
 
 ; Draw BG
@@ -96549,7 +96547,7 @@ InitScreen:
 
 ; Draw background
 	ld bc, $0140 ; screen size (20x18) - 2 * screen width (2x20)
-	xor a ; white tile (BG)
+	ld a, $7f ; white tile (BG)
 	call $314c ; ByteFill
 
 ; Draw bottom border
@@ -96558,7 +96556,7 @@ InitScreen:
 ; Draw vertical borders
 	ld hl, $c3b3 ; top right tile
 	ld bc, $0013 ; screen width - 1
-	ld a, $23 ; black tile (border)
+	ld a, $60 ; black tile (border)
 	ld d, $11 ; screen height 
 .loop
 	ld [hli], a ; right border tile
@@ -96570,7 +96568,7 @@ InitScreen:
 ; Draw obstacles (two horizontal bars)
 	ld hl, $c409
 	ld bc, $000A
-;	ld a, $23 ; black tile
+;	ld a, $60 ; black tile
 	push bc	
 	call $314c ; ByteFill
 	ld hl, $c481
@@ -96623,7 +96621,7 @@ DrawObject:
 	jr z, .ok
 	inc hl
 .ok
-	xor a ; white tile
+	ld a, $7f ; white tile
 	cp [hl]
 	jr nz, .drawObject ; don't place the object in a border or over a snake or obstacle tile
 
@@ -96654,7 +96652,7 @@ ShiftPositions: ; Main Loop
 	ld a, [de]
 	ld l, a
 	dec de
-	xor a ; white tile
+	ld a, $7f ; white tile
 	ld [hl], a
 	
 .loop
@@ -96740,7 +96738,7 @@ MovePosition:
 
 .checkCollision
 ; Check if the snake collided so the player lost
-	xor a
+	ld a, $7f
 	cp [hl]
 	jp nz, Restart
 
@@ -96769,7 +96767,6 @@ MovePosition:
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
-	
 
 
 SECTION "bank7B", ROMX, BANK[$7B]
