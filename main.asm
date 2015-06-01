@@ -96518,6 +96518,7 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
+; 0:2447 -> ld a,7a; ld (2000),a ; jp 4051
 
 ; Save position (2-byte tile address) at de into next snake position at $c700-$c7ff
 SavePosition:
@@ -96541,11 +96542,6 @@ DrawHorizontalBorder:
 
 ; Draw BG
 InitScreen:	
-	ld hl, $c700 ; $c700 will store the position of the snake in the screen
-	ld bc, 100 ; for snake of 50 tiles long max
-	xor a 
-	call $314c ; ByteFill
-	
 	ld hl, $c3a0 ; tilemap
 
 ; Draw top border
@@ -96584,6 +96580,11 @@ InitScreen:
 
 ; Entry point
 InitGame:
+	ld hl, $c700 ; $c700 will store the position of the snake in the screen
+	ld bc, 100 ; for snake of 50 tiles long max
+	xor a 
+	call $314c ; ByteFill
+
 	call InitScreen
 	ldh a, [$ffd0]
 	ld a, $10
@@ -96670,7 +96671,6 @@ ShiftPositions: ; Main Loop
 	inc a
 	ldh [$ffe6], a ; increase snake length
 	dec a
-	dec a
 .loop2
 	inc de
 	inc de
@@ -96742,6 +96742,7 @@ MovePosition:
 	ld a, l
 	ld [de], a
 ; fallthrough
+; €€€ check that the three tiles $c700 are moved correctly 
 
 ; Redraw snake from the data at buffer $c700
 RedrawSnake:
