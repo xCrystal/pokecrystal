@@ -96585,7 +96585,9 @@ InitScreen:
 ; Entry point
 InitGame:
 	call InitScreen
-	
+	ldh a, [$ffd0]
+	ld a, $10
+	ldh [$ffd0], a ; starting movement direction, set to right
 ; Draw snake
 	ld de, $c448 ; center of screen
 	
@@ -96639,9 +96641,9 @@ ShiftPositions: ; Main Loop
 ; snake head is at $c700 + 2 * snake_length - 2
 	ld de, $c700
 	ldh a, [$ffe6]
+	dec a
+	add a
 	ld b, a
-	dec b
-	add b
 	
 ; If we ate the object in the last move, the snake only increases its length
 	ld a, [$dfff]
@@ -96768,6 +96770,7 @@ RedrawSnake:
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
+	
 	
 
 
