@@ -96519,12 +96519,13 @@ SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
 ; 0:3055 -> ld a,7a; ld (2000),a ; jp 4007 ; freeze ff9f at 7a
+; 0x74 eat ; 0x24 snake ; 0x23 black ; 0x00 white
 
 
 ; Place 20 black tiles starting from hl
 DrawHorizontalBorder:
 	ld bc, $0014 ; screen width (20)
-	xor a ; black tile (border)
+	ld a, $23 ; black tile (border)
 	jp $314c ; ByteFill
 
 ; Entry point
@@ -96548,7 +96549,7 @@ InitScreen:
 
 ; Draw background
 	ld bc, $0140 ; screen size (20x18) - 2 * screen width (2x20)
-	ld a, $7f ; white tile (BG)
+	xor a ; white tile (BG)
 	call $314c ; ByteFill
 
 ; Draw bottom border
@@ -96557,7 +96558,7 @@ InitScreen:
 ; Draw vertical borders
 	ld hl, $c3b3 ; top right tile
 	ld bc, $0013 ; screen width - 1
-	xor a ; black tile (border)
+	ld a, $23 ; black tile (border)
 	ld d, $11 ; screen height 
 .loop
 	ld [hli], a ; right border tile
@@ -96569,7 +96570,7 @@ InitScreen:
 ; Draw obstacles (two horizontal bars)
 	ld hl, $c409
 	ld bc, $000A
-	xor a
+;	ld a, $23 ; black tile
 	push bc	
 	call $314c ; ByteFill
 	ld hl, $c481
@@ -96586,7 +96587,7 @@ InitScreen:
 	ld b, 3
 	ld a, b
 	ldh [$ffe6], a ; save snake length	
-	xor a ; black tile (snake)
+	ld a, $24 ; snake tile
 	ld hl, $c700
 .loop2
 	ld [de], a ; place snake tile
@@ -96622,12 +96623,12 @@ DrawObject:
 	jr z, .ok
 	inc hl
 .ok
-	xor a ; black tile
+	xor a ; white tile
 	cp [hl]
-	jr z, .drawObject ; don't place the object in a border or over a snake or obstacle tile
+	jr nz, .drawObject ; don't place the object in a border or over a snake or obstacle tile
 
 ; Place object
-	ld a, $f1 ; object [x]
+	ld a, $74 ; object [x]
 	ld [hl], a ; place object
 ; fallthrough
 
@@ -96647,14 +96648,13 @@ ShiftPositions: ; Main Loop
 	jr nz, .ateObject
 	
 ; Remove the snake's tail
-; €€€ lines 131-137 separate func with lines 173-179
 	ld a, [de]
 	ld h, a
 	inc de
 	ld a, [de]
 	ld l, a
 	dec de
-	ld a, $7f
+	xor a ; white tile
 	ld [hl], a
 	
 .loop
@@ -96730,21 +96730,23 @@ MovePositionRight: ; +1
 MovePosition:
 	add hl, bc
 
+; Check if the snake ate the object
+	ld a, $74
+	cp [hl]
+	push af ; push f flag for later
+	jr nz, .checkCollision
+	ldh [$fffe], a
+	jr .didEat
+
+.checkCollision
 ; Check if the snake collided so the player lost
 	xor a
 	cp [hl]
-	jp z, Restart
+	jp nz, Restart
 
-; Check if the snake ate the object
-	ld a, $f1
-	cp [hl]
-	push af ; push f flag for later
-	jr nz, .didNotEat
-	ldh [$fffe], a
-
-.didNotEat
+.didEat
 ; Save the new snake head tile in the buffer and draw the new head
-	xor a
+	ld a, $24
 	ld [hl], a ; draw head
 	ld a, h
 	ld [de], a
