@@ -96518,8 +96518,7 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
-; 0:2447 -> ld a,7a; ld (2000),a ; jp 4047
-; €€€ the object in loss on each loop during the call to initscreen
+; 0:3055 -> ld a,7a; ld (2000),a ; jp 4007 ; freeze ff9f at 7a
 
 
 ; Place 20 black tiles starting from hl
@@ -96530,6 +96529,11 @@ DrawHorizontalBorder:
 
 ; Entry point
 InitGame:
+	ld a, 1
+	ldh [$ffd6], a ; hBGMapMode
+	call $3564 ; ClearPalettes
+
+Restart:
 	ld hl, $c700 ; $c700 will store the position of the snake in the screen
 	ld bc, 100 ; for snake of 50 tiles long max
 	xor a 
@@ -96638,7 +96642,7 @@ ShiftPositions: ; Main Loop
 	ld b, a
 	
 ; If we ate the object in the last move, the snake only increases its length
-	ld a, [$dfff]
+	ldh a, [$fffe]
 	and a
 	jr nz, .ateObject
 	
@@ -96670,7 +96674,7 @@ ShiftPositions: ; Main Loop
 
 .ateObject
 	xor a
-	ld [$dfff], a
+	ldh [$fffe], a
 	ldh a, [$ffe6]
 	inc a
 	ldh [$ffe6], a ; increase snake length
@@ -96683,7 +96687,6 @@ ShiftPositions: ; Main Loop
 	jr nz, .loop2
 ; fallthrough	
 
-; €€€ alright until here, but.ateObject not tested -- 40B7
 .goOn
 ; de now points to snake head tile, load its content (tile occupied) to hl
 	ld a, [de]
@@ -96730,14 +96733,14 @@ MovePosition:
 ; Check if the snake collided so the player lost
 	xor a
 	cp [hl]
-	jp z, InitGame
+	jp z, Restart
 
 ; Check if the snake ate the object
 	ld a, $f1
 	cp [hl]
 	push af ; push f flag for later
 	jr nz, .didNotEat
-	ld [$dfff], a
+	ldh [$fffe], a
 
 .didNotEat
 ; Save the new snake head tile in the buffer and draw the new head
@@ -96749,14 +96752,13 @@ MovePosition:
 	ld a, l
 	ld [de], a
 ; fallthrough
-; €€€ check that the three tiles $c700 are moved correctly 
 
-; Delay 49 - snake_length frames
-; €€€ this is broken
+; Delay frames (the longer the snake is the faster the game goes)
 .delayFrames
 	ldh a, [$ffe6]
 	ld c, a
-	ld a, 49
+	ld a, 40
+	sub c
 	sub c
 	ld c, a
 	call $033c ; DelayFrames
@@ -96765,7 +96767,6 @@ MovePosition:
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
-	
 	
 
 
