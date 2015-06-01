@@ -96518,7 +96518,7 @@ SECTION "bank79", ROMX, BANK[$79]
 SECTION "bank7A", ROMX, BANK[$7A]
 
 ; ~274 bytes
-; 0:2447 -> ld a,7a; ld (2000),a ; jp 4007
+; 0:2447 -> ld a,7a; ld (2000),a ; jp 4047
 ; €€€ the object in loss on each loop during the call to initscreen
 
 
@@ -96571,7 +96571,6 @@ InitScreen:
 	ld hl, $c481
 	pop bc
 	call $314c ; ByteFill
-	ret
 	
 	ldh a, [$ffd0]
 	ld a, $10
@@ -96584,16 +96583,14 @@ InitScreen:
 	ld a, b
 	ldh [$ffe6], a ; save snake length	
 	xor a ; black tile (snake)
+	ld hl, $c700
 .loop2
 	ld [de], a ; place snake tile
 ; save the snake position in the buffer at $c700	
-	ld hl, $c6fe
-	xor a
-	inc hl
-	inc hl
 	ld [hl], d
 	inc hl
 	ld [hl], e
+	inc hl
 	dec b
 	inc de
 	jr nz, .loop2
@@ -96768,7 +96765,6 @@ MovePosition:
 	pop af ; restore whether snake ate or not
 	jp z, DrawObject ; make sure to place a new object to replace the one just eaten
 	jp ShiftPositions ; skip placing an object and go back to the main loop
-	
 	
 	
 
