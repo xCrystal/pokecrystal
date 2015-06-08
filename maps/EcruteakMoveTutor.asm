@@ -73,6 +73,10 @@ CantTeachScript:
 	yesorno
 	iffalse SaidNoScript
 	jump TutorScriptPart2
+
+Textbox: 
+	db $00
+	db $57
 	
 TutorScript:
 	faceplayer
@@ -88,6 +92,8 @@ TutorScript:
 	checkcoins 1000
 	if_equal $2, NotEnoughCoinsScript
 	writetext SaidYes
+	keeptextopen
+	writetext Textbox
 TutorScriptPart2:	
 	callasm Function1 ; select mon from menu to teach move to
 	if_equal $ff, SaidNoScript
@@ -131,7 +137,8 @@ SaidYes:
 	done
 	
 Teach:
-	text "ok"
+	text "Good choice! Let"
+	line "me see…"
 	done
 
 Function2:
