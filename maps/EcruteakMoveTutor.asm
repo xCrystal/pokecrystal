@@ -78,6 +78,26 @@ Textbox:
 	db $00
 	db $57
 	
+AlreadyKnowsText:
+	text "Oh, look! What a"
+	line "coincidence!"
+	
+	para "Your #MON"
+	line "already knows"
+	cont "this move!"
+	
+	para "What about you"
+	line "pick a different"
+	cont "#MON?"
+	done		
+	
+AlreadyKnowsScript:
+	writetext AlreadyKnowsText
+	yesorno
+	iffalse SaidNoScript
+	jump TutorScriptPart2
+	
+	
 TutorScript:
 	faceplayer
 	loadfont
@@ -93,13 +113,17 @@ TutorScript:
 	if_equal $2, NotEnoughCoinsScript
 	writetext SaidYes
 	keeptextopen
-	writetext Textbox
-TutorScriptPart2:	
+TutorScriptPart2:
+	writetext Textbox	
 	callasm Function1 ; select mon from menu to teach move to
 	if_equal $ff, SaidNoScript
 	callasm Function2 ; disregard gen 2 mons and gen 1 mons with gen 2 egg moves
 	if_equal $ff, CantTeachScript
 	writetext Teach
+	keeptextopen
+	callasm Function3 ; get move to teach
+	if_equal $ff, AlreadyKnowsScript
+	writetext Done	
 	closetext
 	loadmovesprites
 	end	
@@ -139,10 +163,93 @@ SaidYes:
 Teach:
 	text "Good choice! Let"
 	line "me see…"
+	
+	para "Yes! Got it!"
+	done
+	
+Done:
+	text "OK"
 	done
 
+Function3:
+	call GetWeekday
+	sla a
+	sla a
+	sla a
+	ld b, a
+	sla a
+	add b
+	ld hl, hHours
+	ld b, [hl]
+	add b
+	inc a
+	ld b, a
+	ld hl, TutorMoves
+	ld a, [CurPartySpecies]
+	ld c, a
+.nextMon	
+	dec c
+	jr z, .gotMon
+.loop	
+	ld a, [hl]
+	cp $ff
+	inc hl
+	jr z, .nextMon
+	jr .loop
+.gotMon
+	ld a, b
+	dec hl
+.loopBack
+	ld d, h
+	ld e, l
+.loop2
+	inc de
+	ld a, [de]
+	cp $ff
+	jr z, .loopBack
+	dec b
+	jr nz, .loop2
+.gotMove
+	ld [wd265], a
+	ld [wd262], a	
+	call GetMoveName
+	call CopyName1
+	
+	ld hl, StringBuffer2
+	ld de, wd066
+	ld bc, $000c
+	call CopyBytes
+	
+	ld a, [CurPartyMon]
+	ld hl, PartyMonNicknames
+	call GetNick
+
+	callab KnowsMove
+	jr c, .alreadyKnows
+	predef LearnMove
+	ret	
+	
+.alreadyKnows
+	ld a, $ff
+	ld [ScriptVar], a
+	ret
+	
+	
+	
 Function2:
 	ld a, [CurPartySpecies]
+	cp CATERPIE
+	jr z, .cantTeach
+	cp METAPOD
+	jr z, .cantTeach
+	cp WEEDLE
+	jr z, .cantTeach
+	cp KAKUNA
+	jr z, .cantTeach
+	cp MAGIKARP
+	jr z, .cantTeach
+	cp DITTO
+	jr z, .cantTeach
 	cp CHIKORITA
 	jp nc, .cantTeach
 	push af
@@ -215,11 +322,6 @@ Function2:
 	
 
 Function1: ; 2c7fb
-	ld hl, StringBuffer2
-	ld de, wd066
-	ld bc, $000c
-	call CopyBytes
-
 	call FadeToMenu
 	call WhiteBGMap
 	call ClearScreen
@@ -245,10 +347,6 @@ Function1: ; 2c7fb
 	pop bc
 	call z, .playWrongSound
 	push bc
-	ld hl, wd066
-	ld de, StringBuffer2
-	ld bc, $000c
-	call CopyBytes
 	pop af
 
 	jr c, .exitedMenu
