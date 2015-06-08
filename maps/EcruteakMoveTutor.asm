@@ -123,7 +123,14 @@ TutorScriptPart2:
 	keeptextopen
 	callasm Function3 ; get move to teach
 	if_equal $ff, AlreadyKnowsScript
-	writetext Done	
+	if_equal $00, SaidNoScript
+	writetext Done
+	keeptextopen
+	takecoins 1000
+	waitbutton
+	playsound SFX_TRANSACTION
+	special Function24b25
+	writetext Done2
 	closetext
 	loadmovesprites
 	end	
@@ -144,7 +151,7 @@ Intro:
 	
 	para "And it will only"
 	line "cost you 1000"
-	cont "coins!"	
+	cont "coins!"
 	done
 	
 YesNo:
@@ -168,8 +175,14 @@ Teach:
 	done
 	
 Done:
-	text "OK"
+	text "Fantastic!"
+	line "…" ; xxx
 	done
+	
+Done2:
+	text "Look at all these"
+	line "coins! Hehehe!"
+	done	
 
 Function3:
 	call GetWeekday
@@ -227,6 +240,13 @@ Function3:
 	callab KnowsMove
 	jr c, .alreadyKnows
 	predef LearnMove
+	push bc
+	ld c, $5
+	callab ChangeHappiness
+	pop bc
+	ld a, b
+	and a
+	ld [ScriptVar], a
 	ret	
 	
 .alreadyKnows
