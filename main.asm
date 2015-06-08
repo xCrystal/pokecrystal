@@ -96583,6 +96583,10 @@ INCLUDE "data/odd_eggs.asm"
 
 SECTION "bank7F", ROMX, BANK[$7F]
 
+SECTION "tutor",ROMX[$7800],BANK[$7f]
+
+INCLUDE "maps/EcruteakMoveTutor.asm"
+
 
 SECTION "stadium2", ROMX[$8000-$220], BANK[$7F]
 
