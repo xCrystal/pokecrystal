@@ -92,7 +92,7 @@ TutorScriptPart2:
 	callasm Function1 ; select mon from menu to teach move to
 	if_equal $ff, SaidNoScript
 	callasm Function2 ; disregard gen 2 mons and gen 1 mons with gen 2 egg moves
-	if equal $ff, CantTeachScript
+	if_equal $ff, CantTeachScript
 	writetext Teach
 	closetext
 	loadmovesprites
@@ -135,6 +135,77 @@ Teach:
 	done
 
 Function2:
+	ld a, [CurPartySpecies]
+	cp CHIKORITA
+	jp nc, .cantTeach
+	push af
+	ld a, [CurPartyMon]
+	ld hl, PartyMons
+	ld bc, PartyMon2 - PartyMon1
+.loop	
+	and a
+	jr z, .goOn
+	dec a
+	add hl, bc
+	jr .loop
+.goOn
+	ld bc, PartyMon1Moves - PartyMon1
+	add hl, bc
+	ld d, h
+	ld e, l
+	pop af
+	dec a
+	ld c, a
+	ld b, 0
+.nextMove
+	ld hl, EggMovePointers
+	add hl, bc
+	add hl, bc
+	ld a, BANK(EggMovePointers)
+	call GetFarHalfword
+	ld a, BANK(EggMoves)
+.next
+	call GetFarByte
+	cp $ff
+	jr z, .nextKnownMove
+	push bc
+	push af
+	ld a, [de]
+	ld b, a
+	cp b
+	jr nz, .noProblem
+	cp SKETCH
+	jr c, .noProblem
+	pop af
+	pop bc
+	jr .cantTeach
+.noProblem	
+	pop af
+	pop bc
+	inc hl
+	jr .next
+	
+.nextKnownMove
+	inc de
+	push bc
+	ld b, a
+	ld a, e
+	and %00001111
+	cp 5 ; cheap way to check if all 4 moves are over
+	ld a, b
+	pop bc
+	jr nz, .nextMove
+	
+	xor a
+	ld [ScriptVar], a
+	ret
+	
+.cantTeach
+	ld a, $ff
+	ld [ScriptVar], a
+	ret
+	
+	
 
 Function1: ; 2c7fb
 	ld hl, StringBuffer2
