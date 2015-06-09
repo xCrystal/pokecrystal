@@ -19,11 +19,11 @@ Tutor_MapEventScriptHeader:
 
 	; people-events
 	db 1
-	person_event SPRITE_GRAMPS, 7, 6, $6, $0, 255, 255, $0, 0, TutorScript, $ffff
+	person_event SPRITE_GRAMPS, 7, 6, $6, $0, 255, 255, $80, 0, TutorScript, $ffff
 	
 NotCCText:
 	text "But you don't have"
-	line "a COIN CASEâ€¦"
+	line "a COIN CASE…"
 	done
 
 NotCCScript:	
@@ -34,7 +34,7 @@ NotCCScript:
 	
 NotEnoughCoinsText:
 	text "But you don't have"
-	line "enough coinsâ€¦"
+	line "enough coins…"
 	done	
 	
 NotEnoughCoinsScript:	
@@ -44,7 +44,7 @@ NotEnoughCoinsScript:
 	end		
 	
 SaidNoText:
-	text "Oh, what a shameâ€¦"
+	text "Oh, what a shame…"
 	line "Just think about"
 	cont "it, okay?"
 	done	
@@ -56,7 +56,7 @@ SaidNoScript:
 	end	
 	
 CantTeachText:
-	text "Hmmâ€¦ I'm sorry, but"
+	text "Hmm… I'm sorry, but"
 	line "I don't know of"
 	
 	para "any move that I"
@@ -169,7 +169,7 @@ SaidYes:
 	
 Teach:
 	text "Good choice! Let"
-	line "me seeâ€¦"
+	line "me see…"
 	
 	para "Yes! Got it!"
 	done
