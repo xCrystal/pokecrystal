@@ -175,8 +175,8 @@ Teach:
 	done
 	
 Done:
-	text "Fantastic!"
-	line "…" ; xxx
+	text "Fantastic! You"
+	line "won't regret it!"
 	done
 	
 Done2:
@@ -185,6 +185,19 @@ Done2:
 	done	
 
 Function3:
+
+	call Function2ed3
+	call FadeToMenu
+	call WhiteBGMap
+	callba Function5004f
+	callba Function50405
+	callba Function503e0
+	callba WritePartyMenuTilemap
+	callba PrintPartyMenuText
+	call WaitBGMap
+	call Function32f9
+	call DelayFrame
+	
 	call GetWeekday
 	sla a
 	sla a
@@ -250,11 +263,13 @@ Function3:
 	ld a, b
 	and a
 	ld [ScriptVar], a
+	call Function2b74	
 	ret	
 	
 .alreadyKnows
 	ld a, $ff
 	ld [ScriptVar], a
+	call Function2b74	
 	ret
 	
 	
@@ -300,8 +315,8 @@ Function2:
 	add hl, bc
 	ld a, BANK(EggMovePointers)
 	call GetFarHalfword
+.next	
 	ld a, BANK(EggMoves)
-.next
 	call GetFarByte
 	cp $ff
 	jr z, .nextKnownMove
@@ -309,15 +324,14 @@ Function2:
 	push af
 	ld a, [de]
 	ld b, a
+	pop af	
 	cp b
 	jr nz, .noProblem
 	cp SKETCH
 	jr c, .noProblem
-	pop af
 	pop bc
 	jr .cantTeach
-.noProblem	
-	pop af
+.noProblem
 	pop bc
 	inc hl
 	jr .next
@@ -345,15 +359,9 @@ Function2:
 	
 
 Function1: ; 2c7fb
+	call Function2ed3
 	call FadeToMenu
 	call WhiteBGMap
-	call ClearScreen
-	call DelayFrame
-	ld b, $14
-	call GetSGBLayout
-	xor a
-	ld [wd142], a
-	
 	callba Function5004f
 	callba Function50405
 	callba Function503e0
@@ -394,5 +402,5 @@ Function1: ; 2c7fb
 	ld [ScriptVar], a
 
 .notExitedMenu
-	call Function2b3c
+	call Function2b74
 	ret	
