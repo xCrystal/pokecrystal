@@ -372,7 +372,6 @@ NidoranFTutorMoves:
 	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 NidorinaTutorMoves:
@@ -386,7 +385,6 @@ NidorinaTutorMoves:
 	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
 	db $ff
 
@@ -407,7 +405,6 @@ NidoqueenTutorMoves:
 	db SKULL_BASH
 	db SUBMISSION
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
 	db $ff
 
@@ -420,7 +417,6 @@ NidoranMTutorMoves:
 	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 NidorinoTutorMoves:
@@ -433,7 +429,6 @@ NidorinoTutorMoves:
 	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
 	db $ff
 
@@ -454,7 +449,6 @@ NidokingTutorMoves:
 	db SKULL_BASH
 	db SUBMISSION
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
 	db $ff
 
