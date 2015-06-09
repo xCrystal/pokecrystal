@@ -195,6 +195,9 @@ Function3:
 	ld hl, hHours
 	ld b, [hl]
 	add b
+	ld hl, PlayerID + 1
+	ld b, [hl]
+	add b
 	inc a
 	ld b, a
 	ld hl, TutorMoves
