@@ -1,146 +1,146 @@
 TutorMoves::
 
 BulbasaurTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_DRAIN	
-	db MIMIC
-	db RAGE
 	db REFLECT
+	db MIMIC
+	db BIDE
 	db SUBSTITUTE
+	db RAGE
+	db BODY_SLAM
 	db SWORDS_DANCE
 	db TAKE_DOWN
+	db MEGA_DRAIN
+	db DOUBLE_EDGE
 	db $ff
 
 IvysaurTutorMoves:
+	db TAKE_DOWN
+	db REFLECT
+	db SWORDS_DANCE
+	db MIMIC
 	db BIDE
+	db SUBSTITUTE
+	db RAGE
+	db MEGA_DRAIN
 	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MEGA_DRAIN	
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
 	db $ff
 
 VenusaurTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MEGA_DRAIN	
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SUBSTITUTE
 	db SWORDS_DANCE
+	db SUBSTITUTE
+	db RAGE
+	db MEGA_DRAIN	
+	db REFLECT
+	db BIDE
 	db TAKE_DOWN
+	db MIMIC
+	db BODY_SLAM
 	db $ff
 
 CharmanderTutorMoves:
-	db BIDE
 	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
 	db SUBSTITUTE
+	db SEISMIC_TOSS
 	db SWORDS_DANCE
+	db SUBMISSION
+	db DOUBLE_EDGE
+	db MEGA_PUNCH
+	db COUNTER
+	db SKULL_BASH
+	db MIMIC
+	db BIDE
+	db REFLECT
 	db TAKE_DOWN
 	db $ff
 
 CharmeleonTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
 	db MEGA_PUNCH
-	db MIMIC
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
+	db SKULL_BASH
+	db BODY_SLAM
 	db SUBSTITUTE
-	db SWORDS_DANCE
+	db COUNTER
+	db MIMIC
 	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db BIDE
+	db SEISMIC_TOSS
+	db REFLECT
+	db MEGA_KICK
+	db SWORDS_DANCE
 	db $ff
 
 CharizardTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
+	db SEISMIC_TOSS
 	db DOUBLE_EDGE
 	db FISSURE	
-	db MEGA_KICK
+	db SKULL_BASH
+	db TAKE_DOWN
+	db BIDE
+	db REFLECT
 	db MEGA_PUNCH
 	db MIMIC
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
+	db MEGA_KICK
 	db SUBMISSION
 	db SUBSTITUTE
+	db COUNTER
+	db BODY_SLAM
 	db SWORDS_DANCE
-	db TAKE_DOWN
 	db $ff
 
 SquirtleTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db RAGE
 	db REFLECT
-	db SEISMIC_TOSS
-	db SUBMISSION
-	db SUBSTITUTE
+	db MEGA_PUNCH
+	db MEGA_KICK
+	db COUNTER
 	db TAKE_DOWN
-	db $ff
+	db BIDE
+	db BUBBLEBEAM
+	db RAGE
+	db SUBMISSION
+	db SEISMIC_TOSS
+	db BODY_SLAM
+	db MIMIC
+	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db $ff	
 
 WartortleTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
 	db MEGA_PUNCH
-	db MIMIC
+	db BODY_SLAM
+	db BIDE
+	db MEGA_KICK
+	db BUBBLEBEAM
 	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SUBMISSION
+	db DOUBLE_EDGE
 	db SUBSTITUTE
+	db SUBMISSION
+	db MIMIC
+	db SEISMIC_TOSS
+	db REFLECT
 	db TAKE_DOWN
+	db FISSURE
+	db COUNTER
 	db $ff
 
 BlastoiseTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SUBMISSION
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBMISSION
+	db REFLECT
+	db BUBBLEBEAM
+	db SEISMIC_TOSS
+	db DOUBLE_EDGE
+	db BODY_SLAM
+	db BIDE
+	db MEGA_KICK
+	db RAGE
+	db MIMIC
+	db COUNTER
+	db MEGA_PUNCH
+	db SUBSTITUTE
 	db $ff
 
 CaterpieTutorMoves:
@@ -150,16 +150,16 @@ MetapodTutorMoves:
 	db $ff
 
 ButterfreeTutorMoves:
-	db BIDE
 	db DOUBLE_EDGE
-	db MIMIC
 	db PSYWAVE
-	db RAGE
+	db TELEPORT
 	db RAZOR_WIND
-	db REFLECT
+	db MIMIC
+	db BIDE
 	db SUBSTITUTE
 	db TAKE_DOWN
-	db TELEPORT
+	db REFLECT
+	db RAGE
 	db $ff
 
 WeedleTutorMoves:
@@ -169,1989 +169,1989 @@ KakunaTutorMoves:
 	db $ff
 
 BeedrillTutorMoves:
+	db TAKE_DOWN
+	db REFLECT
+	db SKULL_BASH
+	db MIMIC
 	db BIDE
 	db DOUBLE_EDGE
 	db MEGA_DRAIN
-	db MIMIC
-	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 PidgeyTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db RAZOR_WIND
-	db REFLECT
-	db SKY_ATTACK
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db MIMIC
+	db DOUBLE_EDGE
+	db REFLECT
+	db RAGE
+	db BIDE
+	db SKY_ATTACK
+	db RAZOR_WIND
 	db $ff
 
 PidgeottoTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db RAZOR_WIND
-	db REFLECT
-	db SKY_ATTACK
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SKY_ATTACK
+	db DOUBLE_EDGE
+	db REFLECT
+	db MIMIC
+	db SUBSTITUTE
+	db BIDE
+	db RAGE
 	db $ff
 
 PidgeotTutorMoves:
+	db SUBSTITUTE
+	db MIMIC
+	db SKY_ATTACK
 	db BIDE
 	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db RAZOR_WIND
-	db REFLECT
-	db SKY_ATTACK
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db REFLECT
+	db RAGE
 	db $ff
 
 RattataTutorMoves:
+	db WATER_GUN
+	db SKULL_BASH
+	db DOUBLE_EDGE
+	db TAKE_DOWN
+	db BUBBLEBEAM
+	db RAGE
+	db MIMIC
+	db SUBSTITUTE
 	db BIDE
 	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
 	db $ff
 
 RaticateTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
+	db WATER_GUN
+	db TAKE_DOWN
+	db SKULL_BASH
 	db MIMIC
 	db RAGE
-	db SKULL_BASH
+	db BODY_SLAM
+	db BIDE
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
+	db BUBBLEBEAM
+	db DOUBLE_EDGE
 	db $ff
 
 SpearowTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db RAZOR_WIND
-	db SKY_ATTACK
+	db DOUBLE_EDGE
+	db BIDE
+	db MIMIC
 	db SUBSTITUTE
+	db SKY_ATTACK
 	db TAKE_DOWN
+	db RAGE
 	db WHIRLWIND
 	db $ff
 
 FearowTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db RAZOR_WIND
-	db SKY_ATTACK
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WHIRLWIND
+	db BIDE
+	db SKY_ATTACK
+	db TAKE_DOWN
+	db MIMIC
+	db SUBSTITUTE
+	db RAZOR_WIND
+	db DOUBLE_EDGE
+	db RAGE
 	db $ff
 
 EkansTutorMoves:
 	db BIDE
-	db BODY_SLAM
+	db SUBSTITUTE
+	db MIMIC
+	db ROCK_SLIDE
+	db RAGE
+	db TAKE_DOWN
 	db DOUBLE_EDGE
+	db SKULL_BASH
 	db FISSURE
 	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db ROCK_SLIDE
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db BODY_SLAM
 	db $ff
 
 ArbokTutorMoves:
-	db BIDE
-	db BODY_SLAM
+	db SKULL_BASH
+	db TAKE_DOWN
+	db SUBSTITUTE
 	db DOUBLE_EDGE
-	db FISSURE
+	db BIDE
 	db MEGA_DRAIN
+	db BODY_SLAM
 	db MIMIC
+	db FISSURE
 	db RAGE
 	db ROCK_SLIDE
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 PikachuTutorMoves:
 	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_KICK
 	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
 	db SUBSTITUTE
+	db RAGE
+	db PAY_DAY
 	db TAKE_DOWN
+	db REFLECT
+	db MIMIC
+	db SUBMISSION
+	db DOUBLE_EDGE
+	db BODY_SLAM
+	db SKULL_BASH
+	db MEGA_KICK
+	db SEISMIC_TOSS
 	db $ff
 
 RaichuTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
 	db REFLECT
+	db DOUBLE_EDGE
 	db SEISMIC_TOSS
+	db PAY_DAY
 	db SKULL_BASH
-	db SUBMISSION
+	db BODY_SLAM
 	db SUBSTITUTE
+	db MIMIC
+	db RAGE
+	db MEGA_PUNCH
+	db SUBMISSION
+	db BIDE
 	db TAKE_DOWN
 	db $ff
 
 SandshrewTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
 	db FISSURE
 	db MIMIC
-	db RAGE
-	db ROCK_SLIDE
-	db SEISMIC_TOSS
 	db SKULL_BASH
+	db TAKE_DOWN
+	db SEISMIC_TOSS
+	db BODY_SLAM
+	db ROCK_SLIDE
+	db BIDE
+	db SWORDS_DANCE
+	db DOUBLE_EDGE
+	db RAGE
 	db SUBMISSION
 	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
 	db $ff
 
 SandslashTutorMoves:	
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db FISSURE
-	db MIMIC
-	db RAGE
-	db ROCK_SLIDE
-	db SEISMIC_TOSS
 	db SKULL_BASH
+	db BODY_SLAM
+	db SEISMIC_TOSS
+	db ROCK_SLIDE
+	db RAGE
+	db DOUBLE_EDGE
 	db SUBMISSION
-	db SUBSTITUTE
 	db SWORDS_DANCE
+	db BIDE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db MIMIC
+	db FISSURE
 	db $ff
 
 NidoranFTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MIMIC
+	db BODY_SLAM
 	db RAGE
+	db MIMIC
+	db BIDE
 	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
 	db $ff
 
 NidorinaTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
 	db DOUBLE_EDGE
-	db HORN_DRILL	
 	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
+	db BIDE
+	db HORN_DRILL	
 	db WATER_GUN
+	db RAGE
+	db BODY_SLAM
+	db SKULL_BASH
+	db REFLECT
+	db BUBBLEBEAM
 	db $ff
 
 NidoqueenTutorMoves:
-	db BIDE
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db FISSURE
-	db HORN_DRILL
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
 	db REFLECT
-	db ROCK_SLIDE
+	db MEGA_PUNCH
+	db HORN_DRILL
+	db SUBSTITUTE
+	db RAGE
+	db MEGA_KICK
+	db BIDE
 	db SEISMIC_TOSS
 	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
+	db ROCK_SLIDE
 	db WATER_GUN
+	db BUBBLEBEAM
+	db MIMIC
+	db FISSURE
+	db DOUBLE_EDGE
+	db SUBMISSION
+	db PAY_DAY
 	db $ff
 
 NidoranMTutorMoves:
+	db MIMIC
+	db DOUBLE_EDGE
 	db BIDE
 	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
+	db REFLECT
+	db RAGE
+	db SKULL_BASH
 	db $ff
 
 NidorinoTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
+	db WATER_GUN
 	db DOUBLE_EDGE
 	db MIMIC
+	db BUBBLEBEAM
+	db BODY_SLAM
 	db RAGE
-	db REFLECT
 	db SKULL_BASH
 	db SUBSTITUTE
-	db WATER_GUN
+	db REFLECT
+	db BIDE
 	db $ff
 
 NidokingTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db FISSURE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
 	db PAY_DAY
-	db RAGE
 	db REFLECT
-	db ROCK_SLIDE
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
+	db FISSURE
+	db MIMIC
+	db BIDE
 	db SUBSTITUTE
+	db MEGA_PUNCH
 	db WATER_GUN
+	db SKULL_BASH
+	db BODY_SLAM
+	db DOUBLE_EDGE
+	db SUBMISSION
+	db BUBBLEBEAM
+	db SEISMIC_TOSS
+	db RAGE
+	db ROCK_SLIDE
 	db $ff
 
 ClefairyTutorMoves:
+	db MEGA_KICK
+	db RAGE
 	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
+	db SKULL_BASH
+	db PSYWAVE
 	db COUNTER
 	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
-	db SUBSTITUTE
+	db SEISMIC_TOSS
 	db TAKE_DOWN
-	db TELEPORT
+	db BODY_SLAM
+	db BUBBLEBEAM
+	db REFLECT
+	db MIMIC
 	db THUNDER_WAVE
-	db TRI_ATTACK
+	db SUBSTITUTE
 	db WATER_GUN
+	db TELEPORT
+	db TRI_ATTACK
+	db MEGA_PUNCH
 	db $ff
 
 ClefableTutorMoves:
-	db BIDE
+	db SKULL_BASH
 	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
 	db DOUBLE_EDGE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PSYWAVE
+	db BUBBLEBEAM
+	db TAKE_DOWN
+	db THUNDER_WAVE
 	db RAGE
+	db TELEPORT
+	db TRI_ATTACK
+	db MIMIC
+	db BIDE
 	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
+	db WATER_GUN
 	db SUBMISSION
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
-	db THUNDER_WAVE
-	db TRI_ATTACK
-	db WATER_GUN
+	db PSYWAVE
+	db MEGA_PUNCH
+	db COUNTER
+	db SEISMIC_TOSS
 	db $ff
 
 VulpixTutorMoves:
-	db BIDE
-	db BODY_SLAM
+	db REFLECT
 	db DOUBLE_EDGE
 	db MIMIC
-	db RAGE
-	db REFLECT
+	db BIDE
 	db SKULL_BASH
 	db SUBSTITUTE
+	db RAGE
 	db TAKE_DOWN
+	db BODY_SLAM
 	db $ff
 
 NinetalesTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db REFLECT
 	db SKULL_BASH
+	db BIDE
+	db REFLECT
+	db RAGE
+	db MIMIC
 	db SUBSTITUTE
 	db TAKE_DOWN
+	db BODY_SLAM
 	db $ff
 
 JigglypuffTutorMoves:
-	db BIDE
+	db SEISMIC_TOSS
 	db BUBBLEBEAM
 	db COUNTER
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
 	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
 	db THUNDER_WAVE
+	db MIMIC
+	db SKULL_BASH
 	db TRI_ATTACK
+	db TAKE_DOWN
+	db MEGA_KICK
+	db REFLECT
+	db RAGE
+	db MEGA_PUNCH
 	db WATER_GUN
+	db BIDE
+	db SUBSTITUTE
+	db TELEPORT
+	db SUBMISSION
 	db $ff
 
 WigglytuffTutorMoves:
-	db BIDE
+	db REFLECT
 	db BUBBLEBEAM
-	db COUNTER
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
+	db SKULL_BASH
 	db PSYWAVE
 	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db TELEPORT
-	db THUNDER_WAVE
-	db TRI_ATTACK
 	db WATER_GUN
+	db MEGA_KICK
+	db COUNTER
+	db SUBSTITUTE
+	db MIMIC
+	db SUBMISSION
+	db TRI_ATTACK
+	db SEISMIC_TOSS
+	db BIDE
+	db TAKE_DOWN
+	db MEGA_PUNCH
+	db THUNDER_WAVE
 	db $ff
 
 ZubatTutorMoves:
+	db SUBSTITUTE
 	db BIDE
 	db DOUBLE_EDGE
+	db TAKE_DOWN
 	db MEGA_DRAIN
+	db RAZOR_WIND
 	db MIMIC
 	db RAGE
-	db RAZOR_WIND
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 GolbatTutorMoves:
-	db BIDE
 	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
 	db RAGE
-	db RAZOR_WIND
-	db SUBSTITUTE
+	db MIMIC
+	db BIDE
+	db MEGA_DRAIN
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db RAZOR_WIND
 	db $ff
 	
 OddishTutorMoves:
-	db BIDE
 	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db REFLECT
 	db SUBSTITUTE
+	db MIMIC
 	db TAKE_DOWN
+	db RAGE
+	db BIDE
+	db MEGA_DRAIN
+	db REFLECT
 	db $ff	
 
 GloomTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
 	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db BIDE
 	db TAKE_DOWN
+	db MIMIC
+	db REFLECT
+	db RAGE
+	db SUBSTITUTE
 	db $ff	
 
 VileplumeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
 	db REFLECT
-	db SUBSTITUTE
+	db BODY_SLAM
+	db MIMIC
+	db BIDE
+	db DOUBLE_EDGE
+	db RAGE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db MEGA_DRAIN
 	db $ff	
 
 ParasTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
 	db MIMIC
-	db PAY_DAY
-	db PSYWAVE
 	db RAGE
+	db SUBSTITUTE
+	db BIDE
+	db MEGA_DRAIN
+	db SWORDS_DANCE
+	db DOUBLE_EDGE
+	db TAKE_DOWN
+	db PAY_DAY
 	db REFLECT
 	db SKULL_BASH
-	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
+	db BODY_SLAM
+	db PSYWAVE
 	db $ff	
 
 ParasectTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
+	db SWORDS_DANCE
 	db PAY_DAY
+	db MEGA_DRAIN
+	db TAKE_DOWN
+	db BODY_SLAM
+	db SKULL_BASH
+	db BIDE
+	db DOUBLE_EDGE
+	db MIMIC
 	db PSYWAVE
 	db RAGE
-	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
+	db REFLECT
 	db $ff	
 
 VenonatTutorMoves:
+	db MIMIC
+	db SUBSTITUTE
 	db BIDE
 	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
+	db REFLECT
 	db PSYWAVE
 	db RAGE
-	db REFLECT
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db MEGA_DRAIN
 	db $ff	
 
 VenomothTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db RAZOR_WIND
-	db REFLECT
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WHIRLWIND
+	db DOUBLE_EDGE
+	db MIMIC
+	db RAGE
+	db MEGA_DRAIN
+	db TAKE_DOWN
+	db RAZOR_WIND
+	db SUBSTITUTE
+	db REFLECT
+	db BIDE
+	db PSYWAVE
 	db $ff	
 
 DiglettTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MIMIC
 	db RAGE
-	db ROCK_SLIDE
+	db BIDE
 	db SUBSTITUTE
+	db ROCK_SLIDE
+	db MIMIC
+	db BODY_SLAM
 	db TAKE_DOWN
 	db $ff	
 
 DugtrioTutorMoves:
+	db RAGE
+	db MIMIC
+	db TAKE_DOWN
+	db SUBSTITUTE
 	db BIDE
 	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db ROCK_SLIDE
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff	
 
 MeowthTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
+	db WATER_GUN
+	db SUBSTITUTE
+	db RAGE
 	db DOUBLE_EDGE
 	db MIMIC
-	db RAGE
-	db SKULL_BASH
-	db SUBSTITUTE
+	db BUBBLEBEAM
 	db TAKE_DOWN
-	db WATER_GUN
+	db BIDE
+	db BODY_SLAM
+	db SKULL_BASH
 	db $ff	
 
 PersianTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db SKULL_BASH
 	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db BIDE
 	db TAKE_DOWN
+	db RAGE
 	db WATER_GUN
+	db BUBBLEBEAM
+	db MIMIC
+	db BODY_SLAM
 	db $ff	
 
 PsyduckTutorMoves:
+	db COUNTER
+	db SKULL_BASH
+	db PAY_DAY
+	db SUBMISSION
+	db MIMIC
 	db BIDE
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db SEISMIC_TOSS
+	db DOUBLE_EDGE
+	db MEGA_PUNCH
+	db MEGA_KICK
+	db RAGE
+	db WATER_GUN
 	db BODY_SLAM
 	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
 	db $ff	
 
 GolduckTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
 	db PAY_DAY
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
+	db BODY_SLAM
+	db COUNTER
 	db SUBSTITUTE
+	db RAGE
+	db BIDE
+	db DOUBLE_EDGE
+	db SEISMIC_TOSS
+	db MIMIC
 	db TAKE_DOWN
 	db WATER_GUN
+	db MEGA_KICK
+	db BUBBLEBEAM
+	db SKULL_BASH
+	db MEGA_PUNCH
+	db SUBMISSION
 	db $ff	
 
 MankeyTutorMoves:
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db PAY_DAY
 	db BIDE
-	db BODY_SLAM
+	db SUBMISSION
+	db ROCK_SLIDE
 	db DOUBLE_EDGE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
-	db ROCK_SLIDE
 	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db MIMIC
+	db MEGA_PUNCH
+	db RAGE
+	db BODY_SLAM
 	db $ff	
 
 PrimeapeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db RAGE
 	db ROCK_SLIDE
-	db SKULL_BASH
+	db DOUBLE_EDGE
+	db BIDE
 	db SUBMISSION
+	db SKULL_BASH
+	db RAGE
+	db MIMIC
+	db MEGA_KICK
 	db SUBSTITUTE
+	db PAY_DAY
+	db BODY_SLAM
+	db MEGA_PUNCH
 	db TAKE_DOWN
 	db $ff	
 
 GrowlitheTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
 	db DRAGON_RAGE
 	db MIMIC
-	db RAGE
 	db REFLECT
-	db SKULL_BASH
+	db RAGE
+	db DOUBLE_EDGE
 	db SUBSTITUTE
+	db SKULL_BASH
+	db BIDE
 	db $ff	
 
 ArcanineTutorMoves:
-	db BIDE
+	db REFLECT
 	db DOUBLE_EDGE
 	db DRAGON_RAGE
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
+	db BIDE
 	db SUBSTITUTE
+	db MIMIC
+	db SKULL_BASH
+	db RAGE
 	db $ff	
 
 PoliwagTutorMoves:
-	db BIDE
-	db COUNTER
-	db DOUBLE_EDGE
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db SKULL_BASH
 	db SUBSTITUTE
+	db MIMIC
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db SKULL_BASH
+	db PSYWAVE
+	db COUNTER
+	db BIDE
+	db RAGE
 	db $ff
 
 PoliwhirlTutorMoves:
-	db BIDE
+	db RAGE
+	db SKULL_BASH
 	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
+	db MIMIC
 	db MEGA_KICK
 	db MEGA_PUNCH
 	db METRONOME
-	db MIMIC
 	db PSYWAVE
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db BIDE
+	db SEISMIC_TOSS
+	db DOUBLE_EDGE
+	db FISSURE
 	db $ff
 
 PoliwrathTutorMoves:
-	db BIDE
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
 	db PSYWAVE
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
+	db BIDE
+	db MIMIC
+	db FISSURE
 	db SUBSTITUTE
+	db METRONOME
+	db SEISMIC_TOSS
+	db DOUBLE_EDGE
+	db COUNTER
+	db MEGA_PUNCH
 	db TAKE_DOWN
+	db MEGA_KICK
+	db SKULL_BASH
+	db RAGE
 	db $ff
 
 AbraTutorMoves:
-	db BIDE
+	db SUBSTITUTE
+	db REFLECT
+	db PSYWAVE
 	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
+	db BIDE
+	db SEISMIC_TOSS
+	db RAGE
+	db SKULL_BASH
+	db MIMIC
 	db MEGA_KICK
+	db DOUBLE_EDGE
+	db SUBMISSION
+	db COUNTER
+	db THUNDER_WAVE
+	db TAKE_DOWN
 	db MEGA_PUNCH
 	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db THUNDER_WAVE
 	db TRI_ATTACK
 	db $ff
 
 KadabraTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db THUNDER_WAVE
+	db SKULL_BASH
 	db TRI_ATTACK
+	db PSYWAVE
+	db DOUBLE_EDGE
+	db METRONOME
+	db RAGE
+	db MEGA_KICK
+	db THUNDER_WAVE
+	db MIMIC
+	db COUNTER
+	db BODY_SLAM
+	db TAKE_DOWN
+	db MEGA_PUNCH
+	db BIDE
+	db SUBSTITUTE
+	db SEISMIC_TOSS
 	db $ff
 	
 AlakazamTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
 	db TAKE_DOWN
-	db THUNDER_WAVE
+	db RAGE
+	db PSYWAVE
+	db SUBSTITUTE
+	db MEGA_PUNCH
+	db SUBMISSION
+	db MEGA_KICK
+	db SKULL_BASH
 	db TRI_ATTACK
+	db SEISMIC_TOSS
+	db THUNDER_WAVE
+	db BODY_SLAM
+	db DOUBLE_EDGE
+	db MIMIC
+	db METRONOME
+	db BIDE
 	db $ff
 
 MachopTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
+	db RAGE
 	db MEGA_PUNCH
 	db METRONOME
-	db MIMIC
-	db RAGE
+	db FISSURE
+	db BIDE
 	db ROCK_SLIDE
+	db MEGA_KICK
+	db DOUBLE_EDGE
+	db COUNTER
+	db BODY_SLAM
 	db SKULL_BASH
+	db MIMIC
 	db SUBSTITUTE
 	db TAKE_DOWN
 	db $ff
 
 MachokeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db RAGE
-	db ROCK_SLIDE
-	db SKULL_BASH
-	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db BODY_SLAM
 	db TAKE_DOWN
+	db SKULL_BASH
+	db FISSURE
+	db BIDE
+	db RAGE
+	db SUBSTITUTE
+	db COUNTER
+	db METRONOME
+	db ROCK_SLIDE
+	db MIMIC
+	db MEGA_PUNCH
 	db $ff
 
 MachampTutorMoves:
-	db BIDE
+	db METRONOME
 	db BODY_SLAM
 	db COUNTER
 	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db RAGE
-	db ROCK_SLIDE
-	db SKULL_BASH
 	db SUBSTITUTE
+	db MEGA_KICK
+	db MIMIC
+	db SKULL_BASH
 	db TAKE_DOWN
+	db ROCK_SLIDE
+	db FISSURE
+	db RAGE
+	db MEGA_PUNCH
+	db BIDE
 	db $ff
 
 BellsproutTutorMoves:
+	db MEGA_DRAIN
+	db RAGE
+	db MIMIC
+	db TAKE_DOWN
+	db SUBSTITUTE
 	db BIDE
 	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 WeepinbellTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
 	db MEGA_DRAIN
+	db BIDE
 	db MIMIC
-	db RAGE
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db RAGE
+	db DOUBLE_EDGE
 	db $ff
 
 VictreebelTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
 	db RAGE
+	db MIMIC
 	db SUBSTITUTE
 	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db BIDE
+	db MEGA_DRAIN
+	db BODY_SLAM
 	db $ff
 
 TentacoolTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
 	db SWORDS_DANCE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db REFLECT
+	db DOUBLE_EDGE
+	db MEGA_DRAIN
+	db SKULL_BASH
+	db MIMIC
+	db RAGE
+	db BIDE
 	db $ff
 
 TentacruelTutorMoves:
+	db RAGE
+	db TAKE_DOWN
+	db SWORDS_DANCE
+	db SUBSTITUTE
+	db MIMIC
 	db BIDE
 	db DOUBLE_EDGE
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
 	db REFLECT
+	db MEGA_DRAIN
 	db SKULL_BASH
-	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
 	db $ff
 
 GeodudeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
 	db FISSURE
+	db TAKE_DOWN
 	db METRONOME
+	db SUBMISSION
+	db BIDE
+	db SEISMIC_TOSS
+	db BODY_SLAM
 	db MIMIC
 	db RAGE
-	db SEISMIC_TOSS
-	db SUBMISSION
+	db COUNTER
+	db DOUBLE_EDGE
 	db SUBSTITUTE
-	db TAKE_DOWN
 	db $ff
 
 GravelerTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
 	db DOUBLE_EDGE
-	db FISSURE
 	db METRONOME
-	db MIMIC
-	db RAGE
+	db FISSURE
+	db COUNTER
+	db BIDE
 	db SEISMIC_TOSS	
+	db RAGE
 	db SUBMISSION
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db MIMIC
+	db BODY_SLAM
+	db SUBSTITUTE
 	db $ff
 
 GolemTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
 	db DOUBLE_EDGE
 	db FISSURE
-	db MEGA_KICK
-	db METRONOME
-	db MIMIC
-	db RAGE
+	db BODY_SLAM
 	db SEISMIC_TOSS	
+	db COUNTER
 	db SUBMISSION
 	db SUBSTITUTE
+	db METRONOME
+	db RAGE
+	db MIMIC
 	db TAKE_DOWN
+	db BIDE
+	db MEGA_KICK
 	db $ff
 
-PonytaTutorMoves: ;xxx
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db HORN_DRILL
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
+PonytaTutorMoves:
 	db TAKE_DOWN
+	db MIMIC
+	db BIDE
+	db REFLECT
+	db BODY_SLAM
+	db RAGE
+	db SUBSTITUTE
+	db SKULL_BASH
+	db HORN_DRILL
+	db DOUBLE_EDGE
 	db $ff
 
 RapidashTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db HORN_DRILL
-	db MIMIC
-	db RAGE
-	db REFLECT
 	db SKULL_BASH
+	db DOUBLE_EDGE
+	db RAGE
+	db BIDE
+	db MIMIC
+	db REFLECT
+	db HORN_DRILL
+	db BODY_SLAM
 	db SUBSTITUTE
 	db TAKE_DOWN
 	db $ff
 
 SlowpokeTutorMoves:
-	db BIDE
-	db BODY_SLAM
+	db PSYWAVE
+	db MIMIC
+	db TRI_ATTACK
+	db FISSURE
 	db BUBBLEBEAM
 	db DOUBLE_EDGE
-	db FISSURE
-	db MIMIC
-	db PAY_DAY
-	db PSYWAVE
 	db RAGE
-	db REFLECT
+	db BIDE
+	db BODY_SLAM
 	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db TELEPORT
+	db TAKE_DOWN
 	db THUNDER_WAVE
-	db TRI_ATTACK
+	db SUBSTITUTE
+	db PAY_DAY
+	db REFLECT
 	db $ff
 
 SlowbroTutorMoves:
 	db BIDE
-	db BODY_SLAM
+	db PSYWAVE
 	db BUBBLEBEAM
+	db REFLECT
+	db RAGE
+	db SEISMIC_TOSS
+	db TRI_ATTACK
+	db FISSURE
 	db COUNTER
 	db DOUBLE_EDGE
-	db FISSURE
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
+	db BODY_SLAM
+	db THUNDER_WAVE
 	db SUBSTITUTE
 	db TAKE_DOWN
+	db MIMIC
+	db MEGA_PUNCH
+	db PAY_DAY
+	db SUBMISSION
 	db TELEPORT
-	db THUNDER_WAVE
-	db TRI_ATTACK
+	db SKULL_BASH
 	db $ff
 
 MagnemiteTutorMoves:
-	db BIDE
+	db TAKE_DOWN
+	db SUBSTITUTE
 	db DOUBLE_EDGE
 	db MIMIC
-	db RAGE
+	db BIDE
 	db REFLECT
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db RAGE
 	db TELEPORT
 	db $ff
 
 MagnetonTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db REFLECT
-	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db BIDE
+	db RAGE
+	db SUBSTITUTE
 	db TELEPORT
+	db MIMIC
 	db $ff
 
 FarfetchDTutorMoves:
-	db BIDE
 	db BODY_SLAM
+	db WHIRLWIND
+	db BIDE
+	db SKULL_BASH
 	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db RAZOR_WIND
 	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
+	db RAGE
 	db TAKE_DOWN
-	db WHIRLWIND
+	db MIMIC
+	db SUBSTITUTE
 	db $ff
 
 DoduoTutorMoves:
 	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
+	db SUBSTITUTE
+	db SKULL_BASH
 	db RAGE
 	db REFLECT
-	db SKULL_BASH
 	db SKY_ATTACK
-	db SUBSTITUTE
+	db BODY_SLAM
 	db TAKE_DOWN
+	db DOUBLE_EDGE
 	db WHIRLWIND
+	db MIMIC
 	db $ff
 
 DodrioTutorMoves:
 	db BIDE
-	db BODY_SLAM
+	db TAKE_DOWN
+	db WHIRLWIND
 	db DOUBLE_EDGE
 	db MIMIC
 	db RAGE
-	db REFLECT
-	db SKULL_BASH
 	db SKY_ATTACK
+	db SKULL_BASH
+	db BODY_SLAM
+	db REFLECT
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db WHIRLWIND
 	db $ff
 
 SeelTutorMoves:
 	db BIDE
 	db BODY_SLAM
 	db BUBBLEBEAM
+	db PAY_DAY
+	db WATER_GUN
+	db MIMIC
+	db SUBSTITUTE
+	db SKULL_BASH
 	db DOUBLE_EDGE
 	db HORN_DRILL
-	db MIMIC
-	db PAY_DAY
 	db RAGE
-	db SKULL_BASH
-	db SUBSTITUTE
-	db WATER_GUN
 	db $ff
 
 DewgongTutorMoves:
+	db WATER_GUN
+	db SKULL_BASH
+	db PAY_DAY
 	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
+	db MIMIC
+	db RAGE
 	db DOUBLE_EDGE
 	db HORN_DRILL
-	db MIMIC
-	db PAY_DAY
-	db RAGE
-	db SKULL_BASH
+	db BODY_SLAM
+	db BUBBLEBEAM
 	db SUBSTITUTE
-	db WATER_GUN
 	db $ff
 
 GrimerTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db EXPLOSION
-	db MEGA_DRAIN
 	db MIMIC
-	db RAGE
+	db BIDE
 	db SELFDESTRUCT
+	db EXPLOSION
 	db SUBSTITUTE
+	db BODY_SLAM
+	db RAGE
+	db MEGA_DRAIN
 	db $ff
 
 MukTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db EXPLOSION
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
-	db SELFDESTRUCT
 	db SUBSTITUTE
+	db EXPLOSION
+	db BIDE
+	db RAGE
+	db MEGA_DRAIN
+	db SELFDESTRUCT
+	db MIMIC
+	db BODY_SLAM
 	db $ff
 
 ShellderTutorMoves:
-	db BIDE
 	db DOUBLE_EDGE
-	db EXPLOSION
-	db MIMIC
-	db RAGE
-	db REFLECT
 	db SELFDESTRUCT
-	db SUBSTITUTE
-	db TELEPORT
-	db TRI_ATTACK
+	db RAGE
 	db WATER_GUN
+	db EXPLOSION
+	db SUBSTITUTE
+	db REFLECT
+	db TRI_ATTACK
+	db BIDE
+	db TELEPORT
+	db MIMIC
 	db $ff
 
 CloysterTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db EXPLOSION
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SELFDESTRUCT
-	db SUBSTITUTE
-	db TELEPORT
 	db TRI_ATTACK
 	db WATER_GUN
+	db TELEPORT
+	db EXPLOSION
+	db RAGE
+	db REFLECT
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db SELFDESTRUCT
+	db BIDE
+	db MIMIC
 	db $ff
 
 GastlyTutorMoves:
-	db BIDE
 	db EXPLOSION
-	db MEGA_DRAIN
-	db MIMIC
+	db SUBSTITUTE
 	db RAGE
 	db SELFDESTRUCT
-	db SUBSTITUTE
+	db BIDE
+	db MIMIC
+	db MEGA_DRAIN
 	db $ff
 
 HaunterTutorMoves:
 	db BIDE
-	db EXPLOSION
-	db MEGA_DRAIN
-	db MIMIC
-	db RAGE
 	db SELFDESTRUCT
+	db MIMIC
+	db MEGA_DRAIN
+	db RAGE
 	db SUBSTITUTE
+	db EXPLOSION
 	db $ff
 
 GengarTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db COUNTER
-	db DOUBLE_EDGE
-	db EXPLOSION
 	db MEGA_DRAIN
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db RAGE
-	db SEISMIC_TOSS
-	db SELFDESTRUCT
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBMISSION
+	db SKULL_BASH
+	db METRONOME
+	db BODY_SLAM
+	db RAGE
+	db MIMIC
+	db MEGA_KICK
+	db SELFDESTRUCT
+	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db SEISMIC_TOSS
+	db MEGA_PUNCH
+	db EXPLOSION
+	db BIDE
 	db $ff
 
 OnixTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db EXPLOSION
-	db FISSURE
-	db MIMIC
-	db SELFDESTRUCT
-	db SKULL_BASH
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SKULL_BASH
+	db SELFDESTRUCT
+	db EXPLOSION
+	db MIMIC
+	db BIDE
+	db FISSURE
+	db BODY_SLAM
+	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db $ff
 
 DrowzeeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
 	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
 	db SUBSTITUTE
 	db TAKE_DOWN
-	db TELEPORT
-	db THUNDER_WAVE
+	db SEISMIC_TOSS
 	db TRI_ATTACK
+	db BODY_SLAM
+	db SKULL_BASH
+	db MIMIC
+	db TELEPORT
+	db SUBMISSION
+	db PSYWAVE
+	db MEGA_PUNCH
+	db MEGA_KICK
+	db BIDE
+	db REFLECT
+	db THUNDER_WAVE
+	db METRONOME
+	db RAGE
+	db DOUBLE_EDGE
+	db COUNTER
 	db $ff
 
 HypnoTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
+	db SUBMISSION
+	db MEGA_KICK
+	db SUBSTITUTE
 	db DOUBLE_EDGE
 	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db TELEPORT
+	db REFLECT
 	db THUNDER_WAVE
+	db BODY_SLAM
+	db MIMIC
+	db METRONOME
+	db PSYWAVE
+	db TAKE_DOWN
 	db TRI_ATTACK
+	db SEISMIC_TOSS
+	db COUNTER
+	db SKULL_BASH
+	db MEGA_PUNCH
+	db RAGE
+	db BIDE
 	db $ff
 
 KrabbyTutorMoves:
 	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
 	db MIMIC
-	db RAGE
-	db SUBSTITUTE
+	db BUBBLEBEAM
 	db SWORDS_DANCE
+	db RAGE
 	db TAKE_DOWN
 	db WATER_GUN
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db BODY_SLAM
 	db $ff
 
 KinglerTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
 	db MIMIC
+	db TAKE_DOWN
 	db RAGE
+	db DOUBLE_EDGE
+	db BUBBLEBEAM
+	db BIDE
 	db SUBSTITUTE
 	db SWORDS_DANCE
-	db TAKE_DOWN
 	db WATER_GUN
+	db BODY_SLAM
 	db $ff
 
 VoltorbTutorMoves:
-	db BIDE
-	db MIMIC
 	db RAGE
+	db BIDE
 	db REFLECT
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
 	db THUNDER_WAVE
+	db TELEPORT
+	db TAKE_DOWN
+	db MIMIC
+	db SUBSTITUTE
 	db $ff
 
 ElectrodeTutorMoves:
-	db BIDE
-	db MIMIC
-	db RAGE
-	db REFLECT
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
 	db THUNDER_WAVE
+	db RAGE
+	db TAKE_DOWN
+	db BIDE
+	db TELEPORT
+	db REFLECT
+	db MIMIC
 	db $ff
 
 ExeggcuteTutorMoves:
 	db BIDE
-	db DOUBLE_EDGE
+	db SELFDESTRUCT
+	db TELEPORT
 	db EGG_BOMB
-	db EXPLOSION
+	db RAGE
+	db SUBSTITUTE
 	db MIMIC
 	db PSYWAVE
-	db RAGE
-	db SELFDESTRUCT
-	db SUBSTITUTE
+	db EXPLOSION
 	db TAKE_DOWN
-	db TELEPORT
+	db DOUBLE_EDGE
 	db $ff
 
 ExeggutorTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db EXPLOSION
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db SELFDESTRUCT
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db TELEPORT
+	db EXPLOSION
+	db RAGE
+	db BIDE
+	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db PSYWAVE
+	db SUBSTITUTE
+	db MIMIC
+	db SELFDESTRUCT
 	db $ff
 
 CuboneTutorMoves:
+	db BUBBLEBEAM
+	db WATER_GUN
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db MEGA_KICK
 	db BIDE
 	db BODY_SLAM
-	db BUBBLEBEAM
 	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
 	db MEGA_PUNCH
+	db FISSURE
+	db DOUBLE_EDGE
+	db SUBMISSION
 	db MIMIC
 	db SEISMIC_TOSS
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
 	db $ff
 
 MarowakTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
+	db TAKE_DOWN
 	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
+	db COUNTER
 	db MIMIC
 	db SEISMIC_TOSS
+	db MEGA_PUNCH
+	db DOUBLE_EDGE
+	db MEGA_KICK
+	db BIDE
+	db WATER_GUN
 	db SUBMISSION
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
+	db BODY_SLAM
 	db $ff
 
 HitmonleeTutorMoves:
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db METRONOME
+	db RAGE
 	db BIDE
-	db BODY_SLAM
+	db MIMIC
+	db MEGA_PUNCH
+	db SKULL_BASH
+	db SEISMIC_TOSS
 	db COUNTER
 	db DOUBLE_EDGE
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db BODY_SLAM
 	db $ff
 
 HitmonchanTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db MEGA_KICK
 	db METRONOME
-	db MIMIC
-	db RAGE
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db SUBMISSION
 	db SEISMIC_TOSS
 	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db BODY_SLAM
+	db RAGE
+	db MEGA_KICK
+	db BIDE
+	db MIMIC
 	db $ff
 
 LickitungTutorMoves:
-	db BIDE
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db RAGE
-	db SEISMIC_TOSS
 	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db SWORDS_DANCE
+	db BUBBLEBEAM
+	db FISSURE
+	db BIDE
+	db DOUBLE_EDGE
+	db RAGE
 	db TAKE_DOWN
+	db MIMIC
+	db SWORDS_DANCE
+	db SUBMISSION
+	db MEGA_KICK
+	db SEISMIC_TOSS
 	db WATER_GUN
+	db COUNTER
+	db SUBSTITUTE
+	db MEGA_PUNCH
 	db $ff
 
 KoffingTutorMoves:
-	db BIDE
 	db MIMIC
-	db RAGE
+	db BIDE
 	db SUBSTITUTE
+	db RAGE
 	db $ff
 
 WeezingTutorMoves:
 	db BIDE
-	db MIMIC
-	db RAGE
 	db SUBSTITUTE
+	db RAGE
+	db MIMIC
 	db $ff
 
 RhyhornTutorMoves:
+	db MIMIC
 	db BIDE
+	db SKULL_BASH
 	db BODY_SLAM
 	db DOUBLE_EDGE
 	db FISSURE
-	db MIMIC
-	db RAGE
-	db SKULL_BASH
 	db SUBSTITUTE
+	db RAGE
 	db $ff
 
 RhydonTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
+	db WATER_GUN
+	db MIMIC
 	db DOUBLE_EDGE
 	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
+	db BIDE
+	db SUBMISSION
+	db BODY_SLAM
 	db RAGE
 	db SEISMIC_TOSS
 	db SKULL_BASH
-	db SUBMISSION
+	db PAY_DAY
+	db MEGA_PUNCH
+	db MEGA_KICK
 	db SUBSTITUTE
-	db WATER_GUN
+	db BUBBLEBEAM
 	db $ff
 
 ChanseyTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
 	db COUNTER
 	db MEGA_KICK
-	db MEGA_PUNCH
-	db MIMIC
-	db PSYWAVE
+	db BUBBLEBEAM
 	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
+	db BIDE
 	db SKULL_BASH
-	db SUBMISSION
+	db SEISMIC_TOSS
 	db SUBSTITUTE
-	db TAKE_DOWN
+	db WATER_GUN
 	db TELEPORT
+	db SUBMISSION
+	db PSYWAVE
+	db MEGA_PUNCH
+	db TAKE_DOWN
+	db MIMIC
+	db BODY_SLAM
 	db THUNDER_WAVE
 	db TRI_ATTACK
-	db WATER_GUN
+	db REFLECT
 	db $ff
 
 TangelaTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
 	db RAGE
 	db SKULL_BASH
-	db SUBSTITUTE
 	db SWORDS_DANCE
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db MIMIC
 	db TAKE_DOWN
+	db BIDE
+	db BODY_SLAM
 	db $ff
 
 KangaskhanTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db FISSURE
-	db MEGA_KICK
-	db MIMIC
-	db ROCK_SLIDE
-	db SEISMIC_TOSS
 	db SKULL_BASH
-	db SUBMISSION
+	db FISSURE
 	db SUBSTITUTE
-	db TAKE_DOWN
+	db BODY_SLAM
+	db COUNTER
+	db SEISMIC_TOSS
+	db BUBBLEBEAM
 	db WATER_GUN
+	db SUBMISSION
+	db BIDE
+	db ROCK_SLIDE
+	db MEGA_KICK
+	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db MIMIC
 	db $ff
 
 HorseaTutorMoves:
 	db BIDE
 	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db SKULL_BASH
+	db MIMIC
 	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db RAGE
 	db $ff
 
 SeadraTutorMoves:
-	db BIDE
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
 	db MIMIC
 	db RAGE
-	db SKULL_BASH
-	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db BIDE
+	db SUBSTITUTE
+	db SKULL_BASH
+	db BUBBLEBEAM
 	db $ff
 
 GoldeenTutorMoves:
-	db BIDE
 	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
+	db SUBSTITUTE
+	db RAGE
+	db BIDE
+	db SKULL_BASH
+	db MIMIC
+	db TAKE_DOWN
 	db $ff
 
 SeakingTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
+	db DOUBLE_EDGE
+	db BIDE
+	db TAKE_DOWN
+	db MIMIC
+	db SUBSTITUTE
+	db RAGE
 	db $ff
 
 StaryuTutorMoves:
 	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db RAGE
+	db SKULL_BASH
+	db REFLECT
+	db PSYWAVE
+	db MIMIC
 	db TELEPORT
-	db THUNDER_WAVE
+	db SUBSTITUTE
 	db TRI_ATTACK
+	db DOUBLE_EDGE
+	db THUNDER_WAVE
 	db $ff
 
 StarmieTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
-	db TAKE_DOWN
+	db PSYWAVE
+	db REFLECT
 	db TELEPORT
-	db THUNDER_WAVE
+	db RAGE
+	db MIMIC
+	db TAKE_DOWN
 	db TRI_ATTACK
+	db DOUBLE_EDGE
+	db THUNDER_WAVE
+	db SKULL_BASH
+	db BIDE
 	db $ff
 
 MrMimeTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
+	db SEISMIC_TOSS
+	db PSYWAVE
+	db SKULL_BASH
 	db MEGA_KICK
 	db MEGA_PUNCH
-	db METRONOME
-	db PSYWAVE
-	db RAGE
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db TAKE_DOWN
+	db BODY_SLAM
 	db TELEPORT
+	db SUBMISSION
+	db METRONOME
+	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db COUNTER
+	db RAGE
+	db BIDE
 	db THUNDER_WAVE
 	db $ff
 
 ScytherTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db SKULL_BASH
-	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db RAGE
+	db MIMIC
+	db BIDE
+	db SUBSTITUTE
 	db $ff
 
 JynxTutorMoves:
-	db BIDE
-	db BUBBLEBEAM
-	db COUNTER
 	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
 	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db TELEPORT
+	db TAKE_DOWN
+	db COUNTER
+	db SUBSTITUTE
+	db MEGA_KICK
+	db SKULL_BASH
+	db BUBBLEBEAM
+	db RAGE
+	db SUBMISSION
+	db BIDE
+	db PSYWAVE
+	db MEGA_PUNCH
+	db REFLECT
+	db METRONOME
+	db SEISMIC_TOSS
 	db WATER_GUN
 	db $ff
 
 ElectabuzzTutorMoves:
 	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
 	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
+	db PSYWAVE
+	db MEGA_PUNCH
 	db THUNDER_WAVE
+	db SUBMISSION
+	db MEGA_KICK
+	db REFLECT
+	db MIMIC
+	db SKULL_BASH
+	db DOUBLE_EDGE
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db METRONOME
+	db BODY_SLAM
+	db RAGE
+	db COUNTER
+	db TELEPORT
 	db $ff
 
 MagmarTutorMoves:
 	db BIDE
-	db BODY_SLAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db METRONOME
-	db MIMIC
 	db PSYWAVE
-	db RAGE
+	db METRONOME
 	db SEISMIC_TOSS
-	db SKULL_BASH
+	db TAKE_DOWN
 	db SUBMISSION
 	db SUBSTITUTE
-	db TAKE_DOWN
+	db RAGE
+	db SKULL_BASH
+	db MIMIC
+	db COUNTER
+	db MEGA_KICK
+	db DOUBLE_EDGE
 	db TELEPORT
+	db BODY_SLAM
 	db $ff
 
 PinsirTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db SUBSTITUTE
+	db MIMIC
+	db BIDE
+	db DOUBLE_EDGE
+	db BODY_SLAM
 	db TAKE_DOWN
+	db RAGE
 	db $ff
 
 TaurosTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db FISSURE
-	db HORN_DRILL
-	db MIMIC
-	db RAGE
 	db SKULL_BASH
+	db BIDE
+	db FISSURE
 	db SUBSTITUTE
+	db HORN_DRILL
+	db RAGE
+	db MIMIC
+	db BODY_SLAM
 	db $ff
 
 MagikarpTutorMoves:
 	db $ff
 
 GyaradosTutorMoves:
-	db BIDE
 	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db REFLECT
-	db SKULL_BASH
 	db SUBSTITUTE
 	db TAKE_DOWN
+	db RAGE
+	db BIDE
+	db SKULL_BASH
 	db WATER_GUN
+	db MIMIC
+	db DOUBLE_EDGE
 	db $ff
 
 LaprasTutorMoves:
 	db BIDE
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db DRAGON_RAGE
 	db HORN_DRILL
-	db MIMIC
-	db PSYWAVE
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
+	db DOUBLE_EDGE
 	db TAKE_DOWN
+	db PSYWAVE
+	db SUBSTITUTE
+	db SKULL_BASH
+	db RAGE
+	db DRAGON_RAGE
+	db REFLECT
+	db MIMIC
+	db BUBBLEBEAM
 	db $ff
 
 DittoTutorMoves:
 	db $ff
 
 EeveeTutorMoves:
-	db BIDE
-	db BODY_SLAM
+	db SKULL_BASH
 	db DOUBLE_EDGE
+	db SUBSTITUTE
 	db MIMIC
 	db RAGE
 	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
+	db BODY_SLAM
+	db BIDE
 	db $ff
 
 VaporeonTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db REFLECT
+	db MIMIC
 	db SKULL_BASH
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db RAGE
+	db BIDE
+	db BUBBLEBEAM
+	db BODY_SLAM
 	db $ff
 
 JolteonTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db REFLECT
 	db SKULL_BASH
-	db SUBSTITUTE
+	db BODY_SLAM
+	db BIDE
 	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db RAGE
+	db MIMIC
 	db $ff
 
 FlareonTutorMoves:
-	db BIDE
-	db BODY_SLAM
+	db RAGE
 	db DOUBLE_EDGE
 	db MIMIC
-	db RAGE
+	db BIDE
 	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
 	db TAKE_DOWN
+	db SUBSTITUTE
+	db BODY_SLAM
+	db SKULL_BASH
 	db $ff
 
 PorygonTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
+	db TELEPORT
 	db PSYWAVE
+	db SUBSTITUTE
+	db SKULL_BASH
+	db THUNDER_WAVE
+	db DOUBLE_EDGE
+	db TAKE_DOWN
+	db MIMIC
 	db RAGE
 	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
-	db THUNDER_WAVE
+	db BIDE
 	db $ff
 
 OmanyteTutorMoves:
+	db TAKE_DOWN
+	db REFLECT
 	db BIDE
-	db BODY_SLAM
+	db SUBSTITUTE
 	db DOUBLE_EDGE
 	db MIMIC
 	db RAGE
-	db REFLECT
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db BODY_SLAM
 	db $ff
 
 OmastarTutorMoves:
-	db BIDE
-	db BODY_SLAM
 	db DOUBLE_EDGE
-	db HORN_DRILL
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
 	db SUBMISSION
-	db SUBSTITUTE
+	db MIMIC
 	db TAKE_DOWN
+	db REFLECT
+	db HORN_DRILL
+	db RAGE
+	db SEISMIC_TOSS
+	db SUBSTITUTE
+	db BIDE
+	db SKULL_BASH
+	db BODY_SLAM
 	db $ff
 
 KabutoTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
 	db REFLECT
-	db SUBSTITUTE
+	db BODY_SLAM
 	db TAKE_DOWN
 	db WATER_GUN
+	db RAGE
+	db BIDE
+	db SUBSTITUTE
+	db DOUBLE_EDGE
+	db MIMIC
 	db $ff
 
 KabutopsTutorMoves:
-	db BIDE
-	db BODY_SLAM	
-	db DOUBLE_EDGE
-	db MEGA_KICK
 	db MIMIC
+	db SUBMISSION
 	db RAGE
+	db SWORDS_DANCE
+	db WATER_GUN
+	db TAKE_DOWN
+	db DOUBLE_EDGE
 	db RAZOR_WIND
 	db REFLECT
-	db SEISMIC_TOSS
-	db SKULL_BASH
-	db SUBMISSION
 	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
-	db WATER_GUN
+	db BODY_SLAM	
+	db SKULL_BASH
+	db BIDE
+	db SEISMIC_TOSS
+	db MEGA_KICK
 	db $ff
 
 AerodactylTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db DRAGON_RAGE
 	db MIMIC
-	db RAGE
-	db RAZOR_WIND
+	db BIDE
+	db DRAGON_RAGE
 	db REFLECT
-	db SKY_ATTACK
+	db DOUBLE_EDGE
+	db RAZOR_WIND
 	db SUBSTITUTE
+	db SKY_ATTACK
+	db RAGE
 	db $ff
 
 SnorlaxTutorMoves:
-	db BIDE
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
 	db FISSURE
-	db MEGA_KICK
-	db MEGA_PUNCH
+	db SUBMISSION
 	db METRONOME
-	db MIMIC
-	db PAY_DAY
-	db PSYWAVE
 	db RAGE
-	db REFLECT
-	db ROCK_SLIDE
+	db PSYWAVE
+	db SKULL_BASH
 	db SEISMIC_TOSS
 	db SELFDESTRUCT
-	db SKULL_BASH
-	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
+	db ROCK_SLIDE
 	db WATER_GUN
+	db DOUBLE_EDGE
+	db COUNTER
+	db MIMIC
+	db PAY_DAY
+	db SUBSTITUTE
+	db REFLECT
+	db BUBBLEBEAM
+	db MEGA_PUNCH
+	db TAKE_DOWN
+	db BIDE
+	db MEGA_KICK
 	db $ff
 
 ArticunoTutorMoves:
-	db BIDE
 	db BUBBLEBEAM
-	db DOUBLE_EDGE
+	db WHIRLWIND
 	db MIMIC
-	db RAGE
-	db RAZOR_WIND
+	db DOUBLE_EDGE
+	db BIDE
 	db SKY_ATTACK
 	db SUBSTITUTE
 	db TAKE_DOWN
+	db RAZOR_WIND
+	db RAGE
 	db WATER_GUN
-	db WHIRLWIND
 	db $ff
 
 ZapdosTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db RAZOR_WIND
-	db REFLECT
-	db SKY_ATTACK
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WHIRLWIND
+	db RAZOR_WIND
+	db MIMIC
+	db TAKE_DOWN
+	db SUBSTITUTE
+	db RAGE
+	db SKY_ATTACK
+	db REFLECT
+	db DOUBLE_EDGE
+	db BIDE
 	db $ff
 
 MoltresTutorMoves:
-	db BIDE
-	db DOUBLE_EDGE
-	db MIMIC
 	db RAGE
-	db RAZOR_WIND
 	db REFLECT
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WHIRLWIND
+	db MIMIC
+	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db SUBSTITUTE
+	db RAZOR_WIND
+	db BIDE
 	db $ff
 
 DratiniTutorMoves:
-	db BIDE
+	db MIMIC
+	db SKULL_BASH
+	db DOUBLE_EDGE
+	db TAKE_DOWN
+	db RAGE
 	db BODY_SLAM
 	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
-	db SUBSTITUTE
-	db TAKE_DOWN
 	db WATER_GUN
+	db SUBSTITUTE
+	db REFLECT
+	db BIDE
 	db $ff
 
 DragonairTutorMoves:
-	db BIDE
 	db BODY_SLAM
+	db HORN_DRILL
+	db RAGE
+	db BIDE
+	db SKULL_BASH
+	db MIMIC
+	db REFLECT
 	db BUBBLEBEAM
 	db DOUBLE_EDGE
-	db HORN_DRILL
-	db MIMIC
-	db RAGE
-	db REFLECT
-	db SKULL_BASH
+	db WATER_GUN
 	db SUBSTITUTE
 	db TAKE_DOWN
-	db WATER_GUN
 	db $ff
 
 DragoniteTutorMoves:
-	db BIDE
+	db HORN_DRILL
+	db WATER_GUN
 	db BODY_SLAM
 	db BUBBLEBEAM
-	db DOUBLE_EDGE
-	db HORN_DRILL
 	db MIMIC
-	db RAGE
-	db RAZOR_WIND
+	db DOUBLE_EDGE
+	db TAKE_DOWN
 	db REFLECT
 	db SKULL_BASH
+	db RAZOR_WIND
 	db SUBSTITUTE
-	db TAKE_DOWN
-	db WATER_GUN
+	db BIDE
+	db RAGE
 	db $ff
 
 MewtwoTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db MEGA_KICK
-	db MEGA_PUNCH
-	db METRONOME
-	db MIMIC
-	db PSYWAVE
 	db RAGE
 	db REFLECT
-	db SEISMIC_TOSS
-	db SELFDESTRUCT
-	db SKULL_BASH
+	db BODY_SLAM
 	db SUBMISSION
-	db SUBSTITUTE
-	db TAKE_DOWN
-	db TELEPORT
-	db THUNDER_WAVE
-	db TRI_ATTACK
 	db WATER_GUN
+	db SELFDESTRUCT
+	db BIDE
+	db METRONOME
+	db SKULL_BASH
+	db MEGA_PUNCH
+	db PSYWAVE
+	db BUBBLEBEAM
+	db SUBSTITUTE
+	db MIMIC
+	db MEGA_KICK
+	db THUNDER_WAVE
+	db SEISMIC_TOSS
+	db TRI_ATTACK
+	db TAKE_DOWN
+	db DOUBLE_EDGE
+	db COUNTER
+	db TELEPORT
 	db $ff
 
 MewTutorMoves:
-	db BIDE
-	db BODY_SLAM
-	db BUBBLEBEAM
-	db COUNTER
-	db DOUBLE_EDGE
-	db DRAGON_RAGE
-	db EGG_BOMB
-	db EXPLOSION
-	db FISSURE
-	db HORN_DRILL
-	db MEGA_DRAIN
-	db MEGA_KICK
+	db SKY_ATTACK
 	db MEGA_PUNCH
-	db MIMIC
-	db PAY_DAY
+	db SUBMISSION
+	db MEGA_DRAIN
 	db PSYWAVE
-	db RAGE
-	db RAZOR_WIND
 	db REFLECT
+	db COUNTER
+	db TRI_ATTACK
+	db PAY_DAY
+	db BODY_SLAM
+	db SWORDS_DANCE
+	db MIMIC
+	db EGG_BOMB
+	db RAZOR_WIND
+	db EXPLOSION
+	db MEGA_KICK
+	db DOUBLE_EDGE
+	db BUBBLEBEAM
+	db SELFDESTRUCT
+	db RAGE
 	db ROCK_SLIDE
 	db SEISMIC_TOSS
-	db SELFDESTRUCT
 	db SKULL_BASH
-	db SKY_ATTACK
-	db SUBMISSION
-	db SUBSTITUTE
-	db SWORDS_DANCE
-	db TAKE_DOWN
-	db TELEPORT
 	db THUNDER_WAVE
-	db TRI_ATTACK
+	db FISSURE
 	db WATER_GUN
+	db TAKE_DOWN
+	db BIDE
+	db HORN_DRILL
+	db TELEPORT
 	db WHIRLWIND
+	db DRAGON_RAGE
+	db SUBSTITUTE
 	db $ff
