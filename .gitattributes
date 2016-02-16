@@ -1,5 +1,5 @@
 # No monkey business with line endings
-* -text
+* -text 
 
 # hexdump binary files
 *.png  binary diff=hex
