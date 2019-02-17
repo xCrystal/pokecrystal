@@ -140,7 +140,7 @@ These are like the regular `VerticalMenu`, except they allow for creating slight
 
 Structure:
 
-```
+```asm
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 0, 10, 7
